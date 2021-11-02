@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+$background-color: hsl(0, 0%, 95%);
+$headings-color: hsl(0, 0%, 95%);
+$buttons-color: hsl(0, 0%, 95%);
+$paragraph-color: hsla(0, 0%, 100%, 0.75);
+
+$sedans-background: hsl(31, 77%, 52%);
+$suv-background: hsl(184, 100%, 22%);
+$luxury-background: hsl(179, 100%, 13%);
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$paragraph-font-size: 15px;
+
+$title-font-family: 'Big Shoulders Display', cursive;
+$paragraph-font-family: 'Lexend Deca';
+
+$border-radius: 10px;

@@ -1,0 +1,133 @@
+@import './variables';
+@import './resets';
+
+body {
+    background-color: $background-color;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100vh / 5vh * 3.5vh;
+    width: 100vw / 5vw * 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .sedans {
+        background-color: $sedans-background;
+        border: {
+            top-left-radius: $border-radius;
+            bottom-left-radius: $border-radius;
+        }
+        padding:  60px 60px 60px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .content {
+            .car-logo {
+                margin-bottom: 30px;
+            }
+
+            .car-title {
+                font-family: $title-font-family;
+                font-size: 40px;
+                color: $headings-color;
+                margin-bottom: 30px;
+            }
+
+            .car-description {
+                font-family: $paragraph-font-family;
+                font-size: $paragraph-font-size;
+                color: $paragraph-color;
+            }
+        }
+
+        button {
+            width: 70%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            color: $sedans-background;
+            font-weight: 500;
+            font-size: $paragraph-font-size;
+            letter-spacing: 1px;
+        }
+    }
+
+    .suvs {
+        background-color: $suv-background;
+        @extend .sedans;
+        border-radius: 0;
+
+        button {
+            color: $suv-background;
+        }
+    }
+
+    .luxury {
+        background-color: $luxury-background;
+        border: {
+            top-right-radius: $border-radius;
+            bottom-right-radius: $border-radius; 
+        }
+
+        @extend .suvs;
+
+        button {
+            color: $luxury-background;
+        }
+
+    }
+}
+
+/****************** MEDIA QUERY ********************/
+@media (max-width: $mobile) {
+    .container {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        width: 90%;
+
+        .sedans {
+            border: {
+                top-right-radius: $border-radius;
+                bottom-left-radius: 0;
+            }
+
+            .car-description {
+                margin-bottom: 30px;
+            }
+        }
+
+        .suvs {
+            border-radius: 0;
+        }
+
+        .luxury {
+            border: {
+                bottom-left-radius: $border-radius;
+                bottom-right-radius: $border-radius;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
